@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samouczek CSS</title>
+    <link rel="stylesheet" href="../arkusze/arkusz meyera.css">
+    <link rel="stylesheet" href="../arkusze/styl.css">
+</head>
+<body>
+    <header>
+        <a id="poprzedni" href="HTML.html">&lt;</a>
+        <h1>Samouczek CSS</h1>
+        <a id="następny" href="JavaScript.html">&gt;</a>
+    </header>
+    <nav>
+        <ul>
+            <li class="Strona Główna"><a href="#">Strona Główna</a>
+                <ul>
+                    <li><a href="#">musisz</a></li>
+                    <li><a href="#">wiedzieć</a></li>
+                    <li><a href="#">o</a></li>
+                    <li><a href="#">HTML 5</a></li>
+                </ul>
+            </li>
+            <li class="HTML"><a href="#">HTML</a>
+                <ul>
+                    <li><a href="HTML.html#Czym jest HTML?">Czym jest HTML?</a></li>
+                    <li><a href="HTML.html#Budowa dokumentu HTML">Budowa dokumentu HTML</a></li>
+                    <li><a href="HTML.html#Podstawowe znaczniki">Podstawowe znaczniki</a></li>
+                    <li><a href="HTML.html#Nagłówki">Nagłówki</a></li>
+                    <li><a href="HTML.html#Teksty i formatowanie">Teksty i formatowanie</a></li>
+                    <li><a href="HTML.html#Listy">Listy</a></li>
+                    <li><a href="HTML.html#Linki">Linki</a></li>
+                    <li><a href="HTML.html#Obrazy">Obrazy</a></li>
+                    <li><a href="HTML.html#Tabele">Tabele</a></li>
+                    <li><a href="HTML.html#Formularze">Formularze</a></li>
+                    <li><a href="HTML.html#Semantyka HTML">Semantyka HTML</a></li>
+                    <li><a href="HTML.html#Atrybuty HTML">Atrybuty HTML</a></li>
+                    <li><a href="HTML.html#Klasy i identyfikatory">Klasy i identyfikatory</a></li>
+                </ul>
+            </li>
+            <li class="CSS"><a href="#">CSS</a>
+                <ul>
+                    <li><a href="CSS.html#Czym jest CSS?">Czym jest CSS?</a></li>
+                    <li><a href="CSS.html#Dodawanie CSS do dokumentu HTML">Dodawanie CSS do dokumentu HTML</a></li>
+                    <li><a href="CSS.html#Selektory">Selektory</a></li>
+                    <li><a href="CSS.html#Kolory i tekst">Kolory i tekst</a></li>
+                    <li><a href="CSS.html#Tło i obramowania">Tło i obramowania</a></li>
+                    <li><a href="CSS.html#Model pudełkowy">Model pudełkowy</a></li>
+                    <li><a href="CSS.html#Jednostki">Jednostki</a></li>
+                    <li><a href="CSS.html#Display">Display</a></li>
+                    <li><a href="CSS.html#Position">Position</a></li>
+                    <li><a href="CSS.html#Flexbox">Flexbox</a></li>
+                    <li><a href="CSS.html#Grid">Grid</a></li>
+                    <li><a href="CSS.html#Pseudoklasy">Pseudoklasy</a></li>
+                    <li><a href="CSS.html#Pseudoelementy">Pseudoelementy</a></li>
+                    <li><a href="CSS.html#Transformacje">Transformacje</a></li>
+                    <li><a href="CSS.html#Przejścia">Przejścia</a></li>
+                    <li><a href="CSS.html#Animacje">Animacje</a></li>
+                    <li><a href="CSS.html#Responsywność">Responsywność</a></li>
+                    <li><a href="CSS.html#Typowe kompnenty stron">Typowe kompnenty stron</a></li>
+                    <li><a href="CSS.html#Najczęściej używane właściwości CSS">Najczęściej używane właściwości CSS</a></li>
+                </ul>
+            </li>
+            <li class="JavaScript"><a href="#">JavaScript</a>
+                <ul>
+                    <li><a href="JavaScript.html">Niedostępne</a></li>
+                </ul>
+            </li>
+            <li class="Python"><a href="#">Python</a>
+                <ul>
+                    <li><a href="Python.html">Niedostępne</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div id="content">
+    <section>
+        <div id="Czym jest CSS?">
+            <h2>1. Czym jest CSS?</h2>
+            <p>CSS (Cascading Style Sheets) odpowiada za wygląd strony.</p>
+            <p>Pozwala określać:</p>
+            <ul>
+                <li>kolory,</li>
+                <li>rozmiary,</li>
+                <li>odstępy,</li>
+                <li>układ,</li>
+                <li>animacje,</li>
+                <li>responsywność.</li>
+            </ul>
+            <hr>
+        </div>
+        <div id="Dodawanie CSS do dokumentu HTML">
+            <h2>2. Dodawanie CSS do dokumentu HTML</h2>
+            <p class="podpunkt">Internal<br>
+                W sekcji &lt;head&gt; dokumentu HTML, umieszczamy kod CSS.
+                <code>
+                    &lt;style&gt;<br>
+                    p{<br>
+                        color:red;<br>
+                    }<br>
+                    &lt;/style&gt;
+        </code>
+</p>
+            <p class="podpunkt">Inline<br>
+                Bezpośrednio w atrybucie style elementu HTML piszemy CSS.
+                <code>
+            &lt;p style="color:red;"&gt;
+                Tekst
+            &lt;/p&gt;
+            </code>
+            </p>
+            
+<p class="podpunkt">External<br>
+    Tworzymy osobny plik z rozszerzeniem .css, czyli arkusz stylów, w którym umieszczamy kod CSS. Następnie w sekcji &lt;head&gt; dokumentu HTML, dodajemy link do tego pliku.
+    <br>HTML:
+    <code>
+        &lt;link rel="stylesheet" href="style.css"&gt;
+    </code>
+    <br>CSS:<br>
+    <code>
+        p{<br>
+            color:red;<br>
+        }<br>
+    </code>
+    <link rel="stylesheet" href="style.css">
+</p>
+<p class="important">Najczęściej stosowana metoda to zewnętrzny arkusz stylów</p>
+<hr>
+</div>
+        <div id="Selektory">
+            <h2>3. Selektory</h2>
+            <p class="podpunkt">Selektor znacznika
+            <code>
+                p{<br>
+                }
+            </code>
+        </p>
+            <p class="podpunkt">Selektor klasy
+            <code>
+                .karta{<br>
+                }
+            </code>
+        </p>
+
+<p class="podpunkt">Selektor identyfikatora<br>
+    <code>
+        #menu{<br>
+        }
+    </code>
+</p>
+<p class="podpunkt">
+Wszystkie elementy<br>
+<code>
+*{<br>}
+</code>
+</p>
+<hr>
+</div>
+        <div id="Kolory i tekst">
+            <h2>4. Kolory i tekst</h2>
+            <p class="podpunkt">Kolor tekstu
+            <code>
+                color:red;<br>
+                color:#ff0000;<br>
+                color:rgb(255,0,0);
+            </code>
+            </p>
+            <p class="podpunkt">Czcionka
+            <code>
+                font-family:Arial;
+            </code>
+        </p>
+        <p class="podpunkt">Rozmiar
+            <code>
+                font-size:20px;
+            </code>
+        </p>
+        <p class="podpunkt">Grubość
+            <code>
+                font-weight:bold;
+            </code>
+        </p>
+        <p class="podpunkt">Wyrównanie
+            <code>text-align:center;</code>
+        </p>
+        <p class="podpunkt">Odstęp między literami
+            <code>letter-spacing:2px;</code>
+        </p>
+        <p class="podpunkt">Odstęp między liniami
+            <code>line-height:1.5;</code>
+        </p>
+        <p class="podpunkt">Wielkość liter
+            <code>text-transform:uppercase;</code>
+        </p>
+        <p class="important">Wszystkie powyższe właściwości można łączyć w jednym selektorze, ale należy pamiętać o średnikach</p>
+        <hr>
+        </div>
+        <div id="Tło i obramowania">
+            <h2>5. Tło i obramowania</h2>
+            <p class="podpunkt">Kolor tła
+                <code>
+                    background-color:lightblue;
+                </code>
+            </p>
+            <p class="podpunkt">Obraz tła
+                <code>
+                    background-image:url(tlo.jpg);
+                </code>
+            </p>
+            <p class="podpunkt">Obramowanie
+                <code>
+                    border:2px solid black;
+                </code>
+            </p>
+            <p class="podpunkt">Zaokrąglenie rogów
+                <code>
+                    border-radius:10px;
+                </code>
+            </p>
+            <p class="podpunkt">Cień elementu
+                <code>
+                    box-shadow:0 0 10px gray;
+                </code>
+            </p>
+             <p class="podpunkt">
+                Cień tekstu
+             <code>
+text-shadow:2px 2px 5px gray;
+,             </code>
+             </p>
+             <hr>
+        </div>
+        <div id="Model pudełkowy">
+            <h2>6. Model pudełkowy</h2>
+
+<p>Każdy element strony składa się z:<br>
+</p>
+<p class="podpunkt">Margin<br>
+Odstęp zewnętrzny.
+<code>
+margin:20px;
+</code>
+</p>
+<p class="podpunkt">Padding<br>
+Odstęp wewnętrzny.
+<code>
+padding:20px;
+</code>
+</p>
+<p class="podpunkt">Border<br>
+Obramowanie.
+<code>
+border:2px solid black;
+</code>
+</p>
+<p class="podpunkt">Content<br>
+Zawartość elementu.
+<code>
+width:200px;
+</code>
+</p>
+<hr>
+        </div>
+        <div id="Jednostki">
+            <h2>7. Jednostki</h2>
+            <p class="podpunkt">px - Piksele.
+            <code>
+                width:300px;
+            </code>
+            </p>
+             <p class="podpunkt">
+                % - Procent rodzica.
+<code>
+width:50%;
+</code>
+</p>
+<p class="podpunkt">em - Jednostka zależna od rozmiaru czcionki elementu.
+            <code>
+                width:20em;
+            </code>
+        </p>
+        <p class="podpunkt">rem - Jednostka zależna od rozmiaru czcionki dokumentu.
+            <code>
+                width:20rem;
+            </code>
+        </p>
+        <p class="podpunkt">vw - Procent szerokości okna.
+            <code>
+                width:50vw;
+            </code>
+        </p>
+        <p class="podpunkt">vh - Procent wysokości okna.
+            <code>
+                height:50vh;
+            </code>
+        </p>
+<hr></div>
+        <div id="Display">
+            <h2>8. Display</h2>
+            <p class="podpunkt">block<br>
+                Nowa linia.
+            <code>
+                display:block;
+            </code>
+            </p>
+            <p class="podpunkt">inline<br>
+                Bez nowej linii.
+            <code>
+                display:inline;
+            </code>
+            </p>
+            <p class="podpunkt">inline-block<br>
+                Połączenie obu.
+            <code>
+                display:inline-block;
+            </code>
+            </p>
+            <p class="podpunkt">none<br>
+                Ukrywa element.
+            <code>
+                display:none;
+            </code>
+            </p>
+        </div>
+        <div id="Position"><h2>9. Position</h2>
+            <p class="podpunkt">
+                static<br>
+                Domyślne położenie.
+                <code>
+                    position:static;
+                </code>
+            </p>
+            <p class="podpunkt">
+                relative<br>
+                Pozycjonowanie względem własnej pozycji.
+                <code>
+                    position:relative;
+                </code>
+            </p>
+            <p class="podpunkt">
+                absolute<br>
+                Pozycjonowanie względem rodzica.
+                <code>
+                    position:absolute;
+                </code>
+            </p>
+            <p class="podpunkt">
+                fixed<br>
+                Przyklejenie do ekranu.
+                <code>
+                    position:fixed;
+                </code>
+            </p>
+            <p class="podpunkt">
+                sticky<br>
+                Przyklejenie po przewinięciu.
+                <code>
+                    position:sticky;
+                </code>
+            </p>
+        </div>
+        <div id="Flexbox">
+            <h2>10. Flexbox</h2>
+            <p>System układania elementów w jednym wymiarze.
+<code>
+.container{
+    display:flex;
+}
+</code>
+            </p>
+            <p>Najważniejsze właściwości:
+                <p class="podpunkt">
+                    align
+                <code>
+                    align-items:center;
+                </code>
+                <code>
+                    align-content:center;
+                </code>
+                <code>
+                    align-self:center;
+                </code>
+                </p>
+                <p class="podpunkt">
+                    justify-content
+                <code>
+                    justify-content:center;
+                </code>
+                </p>
+                
+                <p class="podpunkt">
+                    flex-direction
+                <code>
+                    flex-direction:row;
+                </code>
+                </p>
+                <p class="podpunkt">
+                    gap
+                <code>
+                    gap:10px;
+                </code>
+                </p>
+                <p class="podpunkt">
+                    flex-wrap
+                <code>
+                    flex-wrap:wrap;
+                </code>
+                </p>
+            </p>
+            <p class="important">Idealny do: menu, kart, formularzy, centrowania elementów.
+
+            </p>
+<hr></div>
+        <div id="Grid">
+            <h2>11. Grid</h2>
+            <p>System układania elementów w dwóch wymiarach.</p>
+            <code>
+                .grid{
+                    display:grid;
+                }
+            </code>
+        
+        <p class="podpunkt">Tworzenie kolumn<br>
+            <code>
+            grid-template-columns:repeat(3,1fr);
+            </code>
+        </p>
+        <p class="podpunkt">Tworzenie wierszy<br>
+            <code>
+            grid-template-rows:repeat(2,100px);
+            </code>
+        </p>
+        <p class="podpunkt">Tworzenie odstępów między kolumnami i wierszami
+            <code>
+            gap:10px;  
+            </code>
+            </p>
+         <p class="podpunkt">Tworzenie obszarów<br>
+            <code>
+                grid-template-areas:<br>
+                "header header header"<br>
+                "sidebar content content"<br>
+                "footer footer footer";
+            </code>
+        </p>
+        <p class="podpunkt">Umieszczanie elementów<br>
+            <code>
+                .header{grid-area:header;}<br>
+                .sidebar{grid-area:sidebar;}<br>
+                .content{grid-area:content;}<br>
+                .footer{grid-area:footer;}
+            </code></p>
+
+<p class="important">Idealny do budowy całych stron.</p>
+    <hr>
+</div>
+        <div id="Pseudoklasy">
+           <h2>12. Pseudoklasy</h2>
+           <p class="podpunkt">:hover<br>
+                Po najechaniu kursorem.
+           <code>
+button:hover{<br>
+    background:red;<br>
+}
+</code>
+</p>
+<p class="podpunkt">
+        :active<br>
+        Podczas kliknięcia.
+<code>
+button:active{<br>
+    transform:scale(0.95);<br>
+}
+</code>
+</p>
+<p class="podpunkt">
+        :focus<br>
+        Po zaznaczeniu pola.
+<code>
+input:focus{<br>
+    border:2px solid blue;<br>
+}<br>
+</code>
+</p>
+<p class="podpunkt">
+:first-child<br>
+Pierwszy element.
+<code>
+li:first-child{<br>
+    color:red;<br>
+}
+</code>
+</p>
+<p class="podpunkt">
+:last-child<br>
+Ostatni element.
+<code>
+li:last-child{<br>
+    color:red;<br>
+}
+</code>
+</p>
+<p class="podpunkt">
+:nth-child()
+
+Wybrany element.
+<code>
+li:nth-child(3){<br>
+    color:red;<br>
+}
+</code>
+</p>
+<hr>
+</div>
+        <div id="Pseudoelementy">
+            <h2>13. Pseudoelementy</h2>
+            <p class="podpunkt">::before<br>
+            Dodaje zawartość przed elementem.
+<code>
+p::before{<br>
+    content:"★ ";<br>
+}
+</code>
+</p>
+<p class="podpunkt">::after<br>
+Dodaje zawartość po elemencie.
+<code>
+p::after{<br>
+    content:"!";<br>
+}
+</code>
+</p>
+<hr>
+</div>
+        <div id="Transformacje">
+            <h2>14. Transformacje</h2>
+            <p class="podpunkt">Przesuwanie
+            <code>
+                transform:translateX(50px);
+            </code>
+            </p>
+            <p class="podpunkt">Obrót
+            <code>
+                transform:rotate(45deg);
+            </code>
+            </p>
+            <p class="podpunkt">Skalowanie
+            <code>
+                transform:scale(1.2);
+            </code>
+        </p>
+        <hr></div>
+        <div id="Przejścia">
+            <h2>15. Przejścia (Transitions)</h2>
+
+Płynna zmiana właściwości.
+
+button{
+    transition:0.3s;
+}
+
+Najczęściej używane z:
+
+hover,
+active,
+focus.<hr></div>
+        <div id="Animacje">
+            <h2>16. Animacje</h2>
+        <p class="podpunkt">
+Tworzenie animacji:
+<code>
+@keyframes ruch{<br>
+    <br>
+    from{<br>
+        left:0;<br>
+    }<br>
+    <br>
+    to{<br>
+        left:300px;<br>
+    }<br>
+
+}
+</code>
+</p>
+<p class="podpunkt">Uruchomienie:<br>
+<code>
+.box{<br>
+    animation:ruch 3s;<br>
+}</code>
+</p>
+<p>Najważniejsze właściwości:
+<p class="podpunkt">
+animation-name<br>
+Wskazuje na stworzoną animację
+<code>
+    animation-name: animacja;
+</code></p>
+<p class="podpunkt">
+animation-duration<br>
+Określa czas trwania animacji
+<code>
+    animation-duration: 5s;
+</code></p>
+<p class="podpunkt">
+animation-delay<br>
+Opóźnia animację o wskazany czas
+<code>
+    animation-delay: 10s;
+</code>
+</p>
+<p class="podpunkt">
+animation-iteration-count<br>
+Mówi ile razy ma się powtórzyć animacja
+<code>
+    animation-iteration-count: 2;
+</code>
+</p>
+<p class="podpunkt">
+animation-fill-mode<br>
+Pozwala elementowi zachować właściwości z ostatniego kroku animacji
+<code>
+    animation-fill-mode: forwards;
+</code>
+</p>
+<p class="important">
+    Wszystkie te właściwości da się uzyskać za pomocą <code>animation: ;</code>
+</p>
+</p>
+<hr>
+</div>
+        <div id="Responsywność">
+            <h2>17. Responsywność</h2>
+Responsywność oznacza dostosowanie strony do:
+<ul>
+    <li>telefonów,</li>
+    <li>tabletów,</li>
+    <li>laptopów,</li>
+    <li>monitorów.</li>
+</ul>
+<p class="important">
+Najczęściej używane jednostki:
+
+%,
+vw,
+vh,
+rem,
+</p>
+<code>
+    @media (min-width:489px;)and(max-width:1000px;){<br>
+        <br>
+        font-size:20px;<br>
+        <br>
+    }
+</code>
+<p class="podpunkt">
+    @media<br>
+    Oznacza formatowanie responsywne
+</p>
+<p class="podpunkt">
+    (min-width: ) i (max-width: )<br>
+    Zaznaczają przedział szerokości ekranu, dla którego ma wystąpić to formatowanie
+</p>
+<p class="important">
+    "and" służy jako spójnik dwóch granic - górnej i dolnej, ale można ustalić samą granicę dolną lub górną.
+</p>
+<hr></div>
+        <div id="Typowe kompnenty stron">
+            <h2>18. Typowe komponenty stron</h2>
+<p class="podpunkt">Karta
+    <code>
+.karta{<br>
+    padding:20px;<br>
+    border-radius:15px;<br>
+    box-shadow:0 0 10px gray;<br>
+}
+</code>
+</p>
+<p class="podpunkt">
+Przycisk
+<code>
+button{<br>
+    padding:10px 20px;<br>
+    border:none;<br>
+    border-radius:8px;<br>
+    cursor:pointer;<br>
+}
+</code>
+</p>
+<p class="podpunkt">
+Efekt podświetlenia
+<code>
+button:hover{<br>
+    background-color:red;<br>
+}
+</code>
+</p>
+<p class="podpunkt">
+Powiększenie elementu
+<code>
+.karta:hover{<br>
+    transform:scale(1.05);<br>
+}
+</code>
+</p>
+<p class="podpunkt">
+Podniesienie elementu
+<code>
+.karta:hover{<br>
+    transform:translateY(-5px);<br>
+}
+</code>
+</p>
+<hr></div>
+        <div id="Najczęściej używane właściwości CSS">
+            <h2>19. Najczęściej używane właściwości CSS</h2>
+            <p>To będą szybkie opisy większości częśto używanych właściwości CSS</p>
+            <p class="podpunkt">
+                color<br>
+                kolor tekstu
+            </p>
+            <p class="podpunkt">
+                background-color<br>
+                kolor tła
+            </p>
+            <p class="podpunkt">
+                width<br>
+                szerokość
+            </p>
+            <p class="podpunkt">
+                height<br>
+                wysokość
+            </p>
+            <p class="podpunkt">
+                margin<br>
+                odstęp zewnętrzny
+            </p>
+            <p class="podpunkt">
+                padding<br>
+                odstęp wewnętrzny
+            </p>
+            <p class="podpunkt">
+                border<br>
+                obramowanie
+            </p>
+            <p class="podpunkt">
+                border-radius<br>
+                zaokrąglenie rogów
+            </p>
+            <p class="podpunkt">
+                box-shadow<br>
+                cień
+            </p>
+            <p class="podpunkt">
+                opacity<br>
+                przezroczystość
+            </p>
+            <p class="podpunkt">
+                display<br>
+                sposób wyświetlania
+            </p>
+            <p class="podpunkt">
+                position<br>
+                pozycjonowanie
+            </p>
+            <p class="podpunkt">
+                flex<br>
+                układ Flexbox
+            </p>
+            <p class="podpunkt">
+                grid<br>
+                układ Grid
+            </p>
+            <p class="podpunkt">
+                transform<br>
+                obrót, przesunięcie, skala
+            </p>
+            <p class="podpunkt">
+                transition<br>
+                płynne przejścia
+            </p>
+            <p class="podpunkt">
+                animation<br>
+                animacje
+            </p>
+            <p class="podpunkt">
+                cursor<br>
+                wygląd kursora
+            </p>
+            <p class="podpunkt">
+                overflow<br>
+                kontrola nad przepełnieniem
+            </p>
+            <p class="podpunkt">
+                font-size<br>
+                rozmiar tekstu
+            </p>
+            <p class="podpunkt">
+                font-family<br>
+                czcionka
+            </p>
+            <p class="podpunkt">
+                text-decoration<br>
+                dekoracja tekstu
+            </p>
+            <p class="podpunkt">
+                tekst-align<br>
+                wyrównanie tekstu
+            </p>
+            <p class="podpunkt">
+                gap<br>
+                odstępy w flexbox i grid
+            </p>
+            <p class="podpunkt">
+                z-index<br>
+                kolejność nakładania elementów
+            </p>
+
+        </div>
+    </section>
+
+    </div>
+</body>
+</html>

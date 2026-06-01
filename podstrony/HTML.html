@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samouczek HTML</title>
+    <link rel="stylesheet" href="../arkusze/arkusz meyera.css">
+    <link rel="stylesheet" href="../arkusze/styl.css">
+</head>
+<body>
+    <header>
+        <div id="poprzedni"><a href="Python.html">&lt;</a></div>
+        <h1>Samouczek HTML</h1>
+        <div id="następny"><a href="CSS.html">&gt;</a></div>
+        
+    </header>
+    <nav>
+        <ul>
+            <li class="Strona Główna"><a href="#">Strona Główna</a>
+                <ul>
+                    <li><a href="#">musisz</a></li>
+                    <li><a href="#">wiedzieć</a></li>
+                </ul>
+            </li>
+            <li class="HTML"><a href="#">HTML</a>
+                <ul>
+                    <li><a href="#Czym jest HTML?">Czym jest HTML?</a></li>
+                    <li><a href="#Budowa dokumentu HTML">Budowa dokumentu HTML</a></li>
+                    <li><a href="#Podstawowe znaczniki">Podstawowe znaczniki</a></li>
+                    <li><a href="#Nagłówki">Nagłówki</a></li>
+                    <li><a href="#Teksty i formatowanie">Teksty i formatowanie</a></li>
+                    <li><a href="#Listy">Listy</a></li>
+                    <li><a href="#Linki">Linki</a></li>
+                    <li><a href="#Obrazy">Obrazy</a></li>
+                    <li><a href="#Tabele">Tabele</a></li>
+                    <li><a href="#Formularze">Formularze</a></li>
+                    <li><a href="#Semantyka HTML">Semantyka HTML</a></li>
+                    <li><a href="#Atrybuty HTML">Atrybuty HTML</a></li>
+                    <li><a href="#Klasy i identyfikatory">Klasy i identyfikatory</a></li>
+                </ul>
+            </li>
+            <li class="CSS"><a href="#">CSS</a>
+                <ul>
+                    <li><a href="CSS.html#Czym jest CSS?">Czym jest CSS?</a></li>
+                    <li><a href="CSS.html#Dodawanie CSS do dokumentu HTML">Dodawanie CSS do dokumentu HTML</a></li>
+                    <li><a href="CSS.html#Selektory">Selektory</a></li>
+                    <li><a href="CSS.html#Kolory i tekst">Kolory i tekst</a></li>
+                    <li><a href="CSS.html#Tło i obramowania">Tło i obramowania</a></li>
+                    <li><a href="CSS.html#Model pudełkowy">Model pudełkowy</a></li>
+                    <li><a href="CSS.html#Jednostki">Jednostki</a></li>
+                    <li><a href="CSS.html#Display">Display</a></li>
+                    <li><a href="CSS.html#Position">Position</a></li>
+                    <li><a href="CSS.html#Flexbox">Flexbox</a></li>
+                    <li><a href="CSS.html#Grid">Grid</a></li>
+                    <li><a href="CSS.html#Pseudoklasy">Pseudoklasy</a></li>
+                    <li><a href="CSS.html#Pseudoelementy">Pseudoelementy</a></li>
+                    <li><a href="CSS.html#Transformacje">Transformacje</a></li>
+                    <li><a href="CSS.html#Przejścia">Przejścia</a></li>
+                    <li><a href="CSS.html#Animacje">Animacje</a></li>
+                    <li><a href="CSS.html#Responsywność">Responsywność</a></li>
+                    <li><a href="CSS.html#Typowe kompnenty stron">Typowe kompnenty stron</a></li>
+                    <li><a href="CSS.html#Najczęściej używane właściwości CSS">Najczęściej używane właściwości CSS</a></li>
+                </ul>
+            </li>
+            <li class="JavaScript"><a href="#">JavaScript</a>
+                <ul>
+                    <li><a href="JavaScript.html">Niedostępne</a></li>
+                </ul>
+            </li>
+            <li class="Python"><a href="#">Python</a>
+                <ul>
+                    <li><a href="Python.html">Niedostępne</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div id="content">
+    <section>
+        <div id="Czym jest HTML?">
+            <h2>1. Czym jest HTML?</h2>
+            <p>
+            HTML (HyperText Markup Language) jest językiem znaczników służącym do tworzenia struktury stron internetowych.
+            <br>
+            Za pomocą HTML określamy:
+                <ul>
+                    <li>jakie elementy znajdują się na stronie,</li>
+                    <li>kolejność elementów,</li>
+                    <li>strukturę treści,</li>
+                    <li>formularze,</li>
+                    <li>tabele,</li>
+                    <li>obrazy,</li>
+                    <li>linki.</li>
+                </ul>
+            <p class="important">
+            HTML nie odpowiada za wygląd strony. Jego zadaniem jest opisanie zawartości.
+            <br>
+            Można powiedzieć, że HTML jest szkieletem strony internetowej.
+        </p>
+            </p>
+            <hr>
+    </div>
+        <div id="Budowa dokumentu HTML">
+            <h2>2. Budowa dokumentu HTML</h2>
+
+        <p>Każda strona HTML posiada podobną strukturę.
+            <code>
+                &lt;!DOCTYPE html&gt;<br>
+                &lt;html lang="pl"&gt;<br>
+                &lt;head&gt;<br>
+                &lt;meta charset="UTF-8"&gt;<br>
+                &lt;title&gt;Moja strona&lt;/title&gt;<br>
+                &lt;/head&gt;<br>
+                &lt;body&gt;<br>
+                Zawartość strony<br>
+                &lt;/body&gt;<br>
+                &lt;/html&gt;<br>
+            </code>
+        </p>
+<p class="podpunkt">
+&lt;!DOCTYPE html&gt;<br>
+
+Informuje przeglądarkę, że dokument korzysta z HTML5.
+</p>
+<p class="podpunkt">
+&lt;html&gt;<br>
+
+Główny kontener całej strony.
+</p>
+<p class="podpunkt">
+&lt;head&gt;<br>
+
+Przechowuje informacje o stronie niewidoczne dla użytkownika.
+
+Znajdują się tutaj:
+<span>tytuł strony,</span>
+<span>kodowanie znaków,</span>
+<span>połączenie z CSS,</span>
+<span>metadane.</span>
+</p>
+<p class="podpunkt">
+&lt;meta charset="UTF-8"&gt;<br>
+
+Najczęściej:
+<meta charset="UTF-8">
+
+Pozwala poprawnie wyświetlać polskie znaki.
+</p>
+<p class="podpunkt">
+
+&lt;title&gt;<br>
+
+Tytuł wyświetlany na karcie przeglądarki.<br>
+
+&lt;title&gt;Moja strona&lt;/title&gt;
+</p>
+<p class="podpunkt">
+&lt;body&gt;<br>
+
+Zawiera wszystkie elementy widoczne dla użytkownika.
+</p>
+</p>
+<hr>
+</div>
+        <div id="Podstawowe znaczniki">
+            <h2>3. Podstawowe znaczniki</h2>
+            <p class="podpunkt">
+                &lt;div&gt;<br>
+                Uniwersalny kontener.<br>
+                <code>
+                    &lt;div&gt;
+                    Zawartość
+                    &lt;/div&gt;
+                </code>
+                Najczęściej używany element podczas budowy stron.
+            </p>
+            <p class="podpunkt">
+                &lt;span&gt;<br>
+                Kontener dla fragmentu tekstu.<br>
+                <code>
+                    &lt;p&gt;To jest &lt;span&gt;ważne&lt;/span&gt;.&lt;/p&gt;
+                </code>
+            </p>
+            <p class="podpunkt">
+                &lt;br&gt;<br>
+                Przenosi tekst do nowej linii.<br>
+                Linia 1<br>
+                Linia 2
+            </p>
+            <p class="podpunkt">
+                &lt;p&gt;<br>
+                Definiuje akapit tekstu.<br>
+            </p>
+        </div>
+        <div id="Nagłówki">
+        <h2>4. Nagłówki</h2>
+
+        <p>HTML posiada sześć poziomów nagłówków.</p>
+        <p>
+            <code>
+            &lt;h1&gt;Najważniejszy nagłówek&lt;/h1&gt;<br>
+            &lt;h2&gt;Rozdział&lt;/h2&gt;<br>
+            &lt;h3&gt;Podrozdział&lt;/h3&gt;<br>
+            &lt;h4&gt;Mniej ważny&lt;/h4&gt;<br>
+            &lt;h5&gt;Jeszcze mniej ważny&lt;/h5&gt;<br>
+            &lt;h6&gt;Najmniej ważny&lt;/h6&gt;<br>
+            </code>
+        </p>
+        <p>
+            Znaczenie: <br>
+            Nagłówki tworzą strukturę dokumentu.<br>
+            <p class="podpunkt">
+                Typowa hierarchia:<br>
+                H1 - Tytuł strony<br>
+                H2 - Rozdział<br>
+                H3 - Podrozdział<br>
+                H4 - Szczegóły<br>
+                H5 - Dodatkowe informacje<br>
+                H6 - Najmniej ważne informacje<br>
+            </p>
+            <p class="important">
+                Na stronie zazwyczaj występuje tylko jeden nagłówek H1.
+            </p>
+        </p>
+        <hr>
+        </div>
+        <div id="Teksty i formatowanie">
+            <h2>5. Tekst i formatowanie</h2>
+            <p>Znaczniki służące do formatowania tekstu.</p>
+            <p class="podpunkt">
+                &lt;p&gt;<br>
+                Definiuje akapit tekstu.<br>
+                <span>To jest akapit.</span>
+                
+            </p>
+            <p class="podpunkt">
+                &lt;strong&gt;<br>
+                Ważny tekst.<br>
+                <span>
+                    <strong>Uwaga!</strong>
+                </span>
+            </p>
+            <p class="podpunkt">
+                &lt;em&gt;<br>
+                Wyróżnienie tekstu.<br>
+                <span>
+                    <em>Istotna informacja</em>
+                </span>
+            </p>
+            <p class="podpunkt">
+                &lt;b&gt;<br>
+                Pogrubienie tekstu.<br>
+                <span>
+                    <b>Tekst</b>
+                </span>
+            </p>
+            <p class="podpunkt">
+                &lt;i&gt;<br>
+                Kursywa.<br>
+                <i><span>Kursywa</span></i>
+            </p>
+
+            <p class="podpunkt">
+                &lt;mark&gt;<br>
+                Podświetlenie.<br>
+                <mark><span>Ważne</span></mark>
+            </p>
+            <p class="podpunkt">
+                &lt;small&gt;<br>
+                Mniejszy tekst.<br>
+                <span>
+                <small>Przypis</small></span>
+            </p>
+            <hr>
+        </div>
+        <div id="Listy">
+            <h2>6. Listy</h2>
+            
+        <p class="podpunkt">
+            Lista nieuporządkowana - &lt;ul&gt;
+            <code>
+                &lt;ul&gt;<br>
+                &lt;li&gt;HTML&lt;/li&gt;<br>
+                &lt;li&gt;CSS&lt;/li&gt;<br>
+                &lt;/ul&gt;<br>
+        </code>
+        </p>
+        <p class="podpunkt">
+            Lista uporządkowana - &lt;ol&gt;
+            <code>
+                &lt;ol&gt;<br>
+                &lt;li&gt;Krok pierwszy&lt;/li&gt;<br>
+                &lt;li&gt;Krok drugi&lt;/li&gt;<br>
+                &lt;/ol&gt;<br>
+            </code>
+        </p>
+        <p class="important">
+            &lt;li&gt; - Element listy
+        </p>
+        <hr>
+        </div>
+        <div id="Linki">
+            <h2>7. Linki</h2>
+            <p class="podpunkt">
+            &lt;a&gt;<br>
+            Tworzy odnośnik.
+            <code>
+               &lt;a href="https://example.com"&gt; Strona &lt;/a&gt;
+            </code>
+        </p>
+        
+        </p>
+        <p class="podpunkt">
+            target<br>
+            Otwiera stronę w nowej karcie.
+            <code>
+                &lt;a href="https://example.com" target="_blank"&gt; Strona &lt;/a&gt;
+            </code>
+  
+        <p class="important">
+            href - Adres docelowy.
+        </p>
+        <hr>
+        </div>
+        <div id="Obrazy">
+            <h2>8. Obrazy</h2>
+            <p class="podpunkt">
+             &lt;img&gt;<br>
+             Wstawia obraz na stronę.
+             <code>
+                &lt;img src="obraz.png" alt="Opis obrazu"&gt;
+             </code><span>
+            <img src="../img/obraz.png" alt="Opis obrazu" style="width: 50vw;">
+        </span><br>
+        </p>
+<p class="important">
+src - Ścieżka do pliku.<br>
+
+alt - Opis alternatywny obrazu.
+</p>
+            <hr>
+        </div>
+
+        <div id="Tabele">
+            <h2>9. Tabele</h2>
+<table>
+
+<tr>
+    <th>Imię</th>
+    <th>Wiek</th>
+</tr>
+
+<tr>
+    <td>Adam</td>
+    <td>17</td>
+</tr>
+
+</table>
+<p class="podpunkt">&lt;table&gt;<br>Tabela.</p>
+<p class="podpunkt">&lt;tr&gt;<br>Wiersz.</p>
+<p class="podpunkt">&lt;th&gt;<br>Nagłówek kolumny.</p>
+<p class="podpunkt">&lt;td&gt;<br>Komórka tabeli.</p>
+
+        <hr>
+        </div>
+        <div id="Formularze">
+            <h2>10. Formularze</h2>
+            <p>
+                Formularze umożliwiają użytkownikowi wprowadzanie danych na stronie internetowej.
+            </p>
+            <p>
+                Przykładowe zastosowania:
+            </p>
+            <ul>
+                <li>logowanie,</li>
+                <li>rejestracja,</li>
+                <li>wyszukiwarka,</li>
+                <li>formularz kontaktowy,</li>
+                <li>ankiety,</li>
+                <li>składanie zamówień.</li>
+            </ul>
+            <p class="podpunkt">
+                Każdy formularz powinien znajdować się wewnątrz znacznika:
+            
+            <code>
+                &lt;form&gt;<br>
+                &lt;/form&gt;<br>
+            </code>
+            </p>
+            <p class="podpunkt">
+            label<br>
+            Opisuje pole formularza.
+            <code>
+                &lt;label for="email"&gt;<br>
+                Adres e-mail
+                &lt;/label&gt;
+            </code>
+</p>
+
+        <hr>
+        </div>
+        <div id="Semantyka HTML">
+            11. Semantyka HTML
+
+Znaczniki semantyczne opisują znaczenie elementu.
+
+header
+
+Nagłówek strony.
+
+nav
+
+Menu nawigacyjne.
+
+main
+
+Główna zawartość.
+
+section
+
+Sekcja strony.
+
+article
+
+Samodzielna treść.
+
+aside
+
+Treść poboczna.
+
+footer
+
+Stopka.
+
+Przykład:
+
+<header></header>
+
+<nav></nav>
+
+<main>
+
+    <section>
+
+        <article>
+
+        </article>
+
+    </section>
+
+</main>
+
+<footer></footer>
+        <hr>
+        </div>
+        <div id="Atrybuty HTML">
+            <h2>12. Najważniejsze atrybuty HTML</h2>
+            <p class="podpunkt">placeholder<br>
+            Podpowiedź w formularzu.
+            <code>
+                &lt;input type="text" placeholder="Podaj imię"&gt;
+            </code>
+        </p>
+        <p class="podpunkt">required<br>
+            Pole obowiązkowe.
+            <code>
+                &lt;input type="email" required&gt;
+            </code>
+        </p>
+        <p class="podpunkt"></p>disabled<br>
+            Wyłącza element.
+            <code>
+                &lt;button disabled&gt;
+Wyślij
+</button>
+checked
+</code>
+Domyślnie zaznaczony checkbox.
+
+<input type="checkbox" checked>
+<hr>
+        </div>
+        <div id="Klasy i identyfikatory">
+            <h2>Klasy i identyfikatory</h2>
+            <p class="podpunkt">class<br>
+
+            Pozwala grupować elementy.
+            <code>
+                &lt;div class="karta"&gt;&lt;/div&gt;
+            </code>
+
+Jedna klasa może być użyta wiele razy.
+</p>
+<p class="podpunkt">id<br>
+
+Unikalny identyfikator.<br>
+            <code>
+                &lt;div id="menu"&gt;&lt;/div&gt;<br>
+            </code>
+            Powinien wystąpić tylko raz na stronie.
+            </p>
+        </div>
+    </section>
+    </div>
+    <footer></footer>
+</body>
+</html>

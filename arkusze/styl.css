@@ -1,0 +1,409 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    
+}
+body{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto 1fr auto;
+    gap: 16px;
+    margin-left: 16px;
+    margin-right: 16px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    background-color: rgb(224, 255, 245);
+    overflow: break-word;
+    word-break: break-word;
+}
+header{
+    margin-top: 16px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: aquamarine;
+    box-shadow: 0px 3px 10px #aaddcb;
+    grid-column: span 12;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+}
+header h1{
+    margin-top: 10px;
+    overflow:break-word;
+    min-width: 0;
+}
+header a{
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+}
+#poprzedni{
+    align-self: center;
+}
+#następny{
+    align-self: center;
+}
+nav{
+    background-color:aquamarine;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 3px 10px #aaddcb;
+    height: auto;
+}
+
+nav li{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+    background-color: rgb(0, 255, 170);
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+    overflow: break-word;
+}
+nav ul li ul{
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition:
+        max-height 0.2s ease 1s,
+        opacity 0.2s ease 1s;
+}
+nav ul li ul a{
+    display: block;
+}
+
+section{
+    background-color: rgb(245, 255, 252);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 1px 10px aquamarine, 0px 1px 6px rgba(0, 0, 0, 0.2);
+    display:block;
+}
+nav ul li:hover > ul{
+        max-height: 1000px;
+    opacity: 1;
+
+    transition-delay: 0s;
+    }
+nav ul li:active > ul{
+        max-height: 1000px;
+        opacity: 1;
+    }
+
+nav ul li:hover > ul a{
+        background-color: rgba(255, 246, 120, 0.219);
+    }
+nav ul li:active > ul a {
+        background-color: rgba(255, 246, 120, 0.219);
+    }
+nav ul li:visited
+    section h2{
+        margin-top: 0;
+        font-size: 24px;
+        background-color: rgba(0, 247, 164, 0.342);
+        display: block;
+        border-radius: 10px;
+        padding: 5px 10px;
+    }
+    section p{
+        font-size: 16px;   
+        margin-top: 10px;     
+    }
+    section ul{
+        width: fit-content;
+        text-align: center;
+        margin:auto;
+        padding: 0;
+        margin: 0;
+        display: block;
+    }
+    section ul li{
+        list-style-type: none;
+        line-height: 3;
+        
+        background-color: rgba(0, 247, 206, 0.582);
+        border-radius: 5px;
+        display: block;
+        margin:5px;
+        margin-bottom: 10px;
+    }
+    div{
+        margin:20px;
+    }
+    nav ul li ul a:hover{
+    background-color: rgba(255, 246, 120, 0.589);
+}
+    .important{
+        background-color: rgba(255, 246, 120, 0.219);
+        border-radius: 7px;
+        padding: 10px;
+        border-left: 5px solid rgb(255, 87, 87);
+    }
+    .podpunkt{
+    background-color: rgba(0, 247, 185, 0.582);
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border-left: 5px solid rgb(0, 247, 164);
+    align-self: center;
+}
+section div{
+    grid-row: span 1;
+}
+code{
+    background-color: rgba(0, 247, 111, 0.582);
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: rgb(0, 138, 92);
+    box-shadow: 0px 1px 10px rgb(0, 247, 164), 0px 1px 6px rgba(0, 0, 0, 0.2);
+}
+section p span{
+    background-color: rgb(255, 252, 209);
+    border-radius: 5px;
+    padding: 5px;
+    display:inline-block;
+    margin: 2px;
+    
+}
+table, th, tr{
+    border: 1px solid black;
+}
+
+@media (max-width:480px){
+
+    header{
+        padding: 16px;
+        font-size: 30px;
+    }
+    nav{
+        grid-column: span 12;
+        padding: 5px;
+        font-size: 10px;
+    }
+    nav > ul{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 8px;
+        padding: 0;
+        margin: 0;
+}
+    nav li{
+        grid-column: span 1;
+    }
+    nav a{
+        padding: 10px;
+    }
+    nav ul li a{
+        margin: 0;
+    }
+    #content{
+        grid-column: span 12;
+        font-size: 12px;
+    }
+    section{
+        line-height: 1.5;
+        padding: 3px;
+        grid-column: span 12;
+    }
+    section h2{
+        font-size: 16px;  
+}
+    section p{
+        font-size: 12px;
+        display: block;
+    }
+    section ul li{
+        font-size: 12px;
+    }
+    code{
+        font-size: 14px;
+    }
+    .empty{
+    font-size: 20px;
+}
+    .empty img{
+        width: 20px;
+        height: 20px;
+}
+    
+}
+
+
+
+@media (min-width:481px) and (max-width:768px){
+    header{
+        align-self: center;
+        font-size: 35px;
+        padding: 10px;
+    }
+    header a{
+        padding: 0px;
+        margin: 0px;
+    }
+    nav{
+        grid-column: span 12;
+        font-size: 16px;
+    }
+    nav > ul{
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        gap: 16px;
+        padding: 0;
+        margin: 0;
+}
+    nav li{
+        grid-column: span 2;
+    }
+    nav a{
+        padding: 10px;
+    }
+    nav ul li a{
+        margin: 5px;
+    }
+    #content{
+        grid-column: span 12;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 16px;
+        padding: 0;
+        margin: 0;
+    }
+    section{
+        grid-column: span 12;
+    }
+    section h2{
+        font-size: 18px;
+}
+    section p{
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    section ul li{
+        font-size: 14px;
+    }
+    code{
+        font-size: 16px;
+    }
+    .empty{
+    font-size: 50px;
+}
+    .empty img{
+        width: 50px;
+        height: 50px;
+}
+    
+}
+@media (min-width:769px) and (max-width:1024px){
+    header{
+        padding: 16px;
+        font-size: 65px;
+        
+    }
+    nav{
+        grid-column: span 2;
+        grid-row: span 1;
+        font-size: 22px;
+        padding: 8px;
+        position:sticky;
+    }
+    
+    nav li{
+        grid-column: span 2;
+        margin: 0;
+        
+    }
+    nav a{
+        padding: 10px;
+        grid-row: span 1;
+        margin: 10px;
+    }
+    #content{
+        position: relative;
+        grid-column: span 10;
+        font-size: 16px;
+    }
+    section{
+        grid-column: span 10;
+        display: block;
+        font-size: 20px;
+        
+    }
+    section h2{
+        font-size: 22px;    
+}
+    section p{
+        font-size: 16px;
+        line-height: 1.7;
+    }
+    code{
+        font-size: 20px;
+    }
+    .empty{
+    font-size: 80px;
+}
+    .empty img{
+        width: 80px;
+        height: 80px;
+}
+}
+@media (min-width:1024px){
+    header{
+        padding: 16px;
+        font-size: 100px;
+    }
+    nav{
+        grid-column: span 2;
+        padding: 10px;
+        font-size: 25px;
+    }
+    nav li{
+        grid-column: span 2;
+        margin: 0;
+    }
+    nav a{
+        grid-column: span 2;
+        padding: 10px;
+        margin: 15px;
+    }
+    #content{
+        grid-column: span 10;
+        font-size: 16px;
+    }
+    section{
+        grid-column: span 10;
+    }
+    section h2{
+        font-size: 28px;    
+}
+    section p{
+        font-size: 16px;
+        line-height: 1.7;
+    }
+    code{
+        font-size: 20px;
+    }
+    .empty{
+    font-size: 100px;
+}
+    .empty img{
+        width: 100px;
+        height: 100px;
+}
+}
+
+@keyframes navSelect{
+        0%{opacity: 0;}
+        100%{opacity: 1;}
+}
