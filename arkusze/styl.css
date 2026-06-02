@@ -182,9 +182,6 @@ table, th, tr{
 }
 
 @media (max-width:480px){
-    body{
-        font-family: 'Times New Roman', Times, serif;
-    }
     header{
         padding: 16px;
         font-size: 30px;
@@ -245,9 +242,7 @@ table, th, tr{
 
 
 @media (min-width:481px) and (max-width:768px){
-    body{
-        font-family: 'Times New Roman', Times, serif;
-    }
+
     header{
         align-self: center;
         font-size: 35px;
