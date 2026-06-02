@@ -6,6 +6,23 @@
     <title>Samouczek</title>
     <link rel="stylesheet" href="arkusze/arkusz meyera.css">
     <link rel="stylesheet" href="arkusze/styl.css">
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        nav > ul{
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+        }
+        @media (max-width: 768px){
+            nav  li{
+            grid-column: span 3;
+        }
+        }
+        @media (min-width: 769px){
+            nav li{
+                grid-column: span 12;
+            }
+        }
+    </style>
 </head>
 <body>
     <header style="display: block;">
@@ -13,7 +30,7 @@
     </header>
     <nav>
         <ul>
-            <li class="HTML"><a href="#">HTML</a>
+            <li class="HTML"><a href="podstrony/HTML.html">HTML</a>
                 <ul>
                     <li><a href="podstrony/HTML.html#Czym jest HTML?">Czym jest HTML?</a></li>
                     <li><a href="podstrony/HTML.html#Budowa dokumentu HTML">Budowa dokumentu HTML</a></li>
@@ -30,7 +47,7 @@
                     <li><a href="podstrony/HTML.html#Klasy i identyfikatory">Klasy i identyfikatory</a></li>
                 </ul>
             </li>
-            <li class="CSS"><a href="#">CSS</a>
+            <li class="CSS"><a href="podstrony/CSS.html">CSS</a>
                 <ul>
                     <li><a href="podstrony/CSS.html#Czym jest CSS?">Czym jest CSS?</a></li>
                     <li><a href="podstrony/CSS.html#Dodawanie CSS do dokumentu HTML">Dodawanie CSS do dokumentu HTML</a></li>
@@ -53,14 +70,14 @@
                     <li><a href="podstrony/CSS.html#Najczęściej używane właściwości CSS">Najczęściej używane właściwości CSS</a></li>
                 </ul>
             </li>
-            <li class="JavaScript"><a href="#">JavaScript</a>
+            <li class="JavaScript"><a href="podstrony/JavaScript.html">JavaScript</a>
                 <ul>
-                    <li><a href="JavaScript.html">Niedostępne</a></li>
+                    <li><a href="podstrony/JavaScript.html">Niedostępne</a></li>
                 </ul>
             </li>
-            <li class="Python"><a href="#">Python</a>
+            <li class="Python"><a href="podstrony/Python.html">Python</a>
                 <ul>
-                    <li><a href="Python.html">Niedostępne</a></li>
+                    <li><a href="podstrony/Python.html">Niedostępne</a></li>
                 </ul>
             </li>
 
