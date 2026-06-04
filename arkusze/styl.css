@@ -16,6 +16,8 @@ body{
     background-color: rgb(224, 255, 245);
     overflow: break-word;
     word-break: break-word;
+    font-family: 'Comic Neue', sans-serif;
+
 }
 header{
     margin-top: 16px;
