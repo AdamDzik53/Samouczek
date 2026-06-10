@@ -90,13 +90,13 @@ section{
     display:block;
 }
 nav ul li:hover > ul{
-        max-height: 1000px;
+        max-height: 1000vh;
     opacity: 1;
 
     transition-delay: 0s;
     }
 nav ul li:active > ul{
-        max-height: 1000px;
+        max-height: 1000vh;
         opacity: 1;
     }
 
